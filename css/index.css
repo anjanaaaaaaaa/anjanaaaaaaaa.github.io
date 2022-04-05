@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --text-green: #90ab78;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.logo {
+  border-radius: 4px;
+  height: 8vh;
+}
+
+.Anjanalogo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* padding: 1rem 0; */
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0));
+}
+
+.Anjanalogo > img {
+  margin-top: 1rem;
+}
+img {
+  max-width: 100%;
+  max-height: 70%;
+  position: relative;
+  right: 20px;
+  left: 10px;
+  cursor: pointer;
+}
+.threeline {
+  position: relative;
+  /* left: 95%; */
+  cursor: pointer;
+  /* right: 1%; */
+  z-index: 999;
+  height: 30px;
+  width: 40px;
+  background: 0 0;
+  border: none;
+  margin-right: 1rem;
+}
+html .threeline span {
+  height: 2px;
+  width: 100%;
+  display: block;
+}
+.threeline span {
+  background-color: #cfe0f0;
+}
+.threeline .first {
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+h1 {
+  /* color: #dbb1c4; */
+  color: white;
+  text-align: left;
+
+  /* position: absolute; */
+}
+h3 {
+  margin: 0;
+}
+
+.threeline .first,
+.threeline .second,
+.threeline .third {
+  position: absolute;
+  left: 0;
+}
+.threeline .third {
+  bottom: 0;
+}
+#svg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.section {
+  padding: 7vh 7vw;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section-full {
+  height: 100vh;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#typewriter {
+  color: beige;
+
+  /* overflow: hidden; 
+  border-right: 0.15em solid #11468F; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.15em; 
+  animation: typing 7s steps(40, end), blink-caret 1s step-end infinite;
+  width: fit-content; */
+  font-size: 5rem;
+  font-family: "Send Flowers", cursive;
+  text-align: left;
+}
+
+.card {
+  border: 1px solid #50c878;
+  margin: 1rem 0;
+  padding: 1rem;
+  color: whitesmoke;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-baige {
+  /* background: var(--text-green); */
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.616);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  /* transform: translateX(100%); */
+}
+
+.menu-close {
+  transform: translateX(100%);
+}
+
+.menu > a {
+  color: var(--text-green);
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  text-align: left;
+}
+
+.menu > a:hover {
+  opacity: 0.5;
+}
+
+.menu > .threeline {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(179, 88, 163);
+  }
+}
+.card-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.card-link:hover .card {
+  opacity: 0.6;
+}
+.socials {
+  height: 2rem;
+}
+.about {
+  font-size: larger;
+  color: whitesmoke;
+  margin: 1rem auto;
+}
+#about {
+  padding: 2vh 7vw;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.divofsocials {
+  width: fit-content;
+  margin: 2rem auto;
+}
+.divofsocials a {
+  text-decoration: none;
+  margin-right: 0.5rem;
+}

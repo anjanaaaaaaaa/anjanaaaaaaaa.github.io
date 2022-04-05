@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anjana Haridas | Portfolio</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- <div class="Anjanalogo">
+      <img src="css/ATH.png" alt="logo" />
+      <button id="threeline" tabindex="1">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+      </button>
+    </div> -->
+
+    <div id="svg"></div>
+
+    <div id="menu" class="menu menu-close">
+      <button class="threeline" tabindex="1" onclick="hamburger()">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+      </button>
+
+      <a href="#" onclick="hamburger()">Home </a>
+      <a href="#projects" onclick="hamburger()">Projects </a>
+      <a href="#about" onclick="hamburger()">Connect with me </a>
+    </div>
+
+    <div>
+      <div class="section section-full">
+        <div class="Anjanalogo">
+          <img src="css/ATH.png" alt="logo" class="logo" />
+          <button class="threeline" tabindex="1" onclick="hamburger('remove')">
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+          </button>
+        </div>
+        <!-- <h1 class="typewriter">Hello, this is Anjana Haridas.</h1> -->
+        <div class="banner">
+          <h1 id="typewriter"></h1>
+        </div>
+      </div>
+      <div class="section bg-baige" id="projects">
+        <h1>Projects</h1>
+
+        <a class="card-link" href="https://github.com/anjanaaaaaaaa/IDAC"
+          ><div class="card">
+            <div class="card-title"></div>
+            <div class="card-para">
+              <h3>IDAC</h3>
+              <br />
+              Technology- HTML, CSS, JS, Bootstrap, Django, SQL<br />
+              A web application where the patient can mention about his illness
+              and th AI will prescribe medicines according to the standards
+              given by Indian doctors.
+            </div>
+          </div>
+        </a>
+        <a
+          class="card-link"
+          href="https://github.com/anjanaaaaaaaa/E-wallet-thirdyearproject"
+        >
+          <div class="card">
+            <div class="card-title"></div>
+            <div class="card-para">
+              <h3>E-wallet-thirdyearproject</h3>
+              <br />
+              Technology- Web3, Node, React, Ganache, Solidity <br />Ewallet
+              built on Ethereum blockchain used to transfer coins using stable
+              coin(Dai)
+            </div>
+          </div>
+        </a>
+        <a
+          class="card-link"
+          href="https://github.com/anjanaaaaaaaa/ExpenseTracker"
+        >
+          <div class="card">
+            <div class="card-title"></div>
+            <h3>ExpenseTracker</h3>
+            <br />
+            <div class="card-para">
+              Technology- HTML, CSS, JS, Bootstrap, Java Spring boot<br />
+              An expense tracker is a spring boot app that users can access from
+              URL and update their daily expenses so that they are well known
+              for their expenses.
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="about">
+        <div class="card-para about">
+          Hi! This is Anjana Haridas, a B.Tech third year student pursuing
+          Computer Science with specialization in Cyber Security and Digital
+          Forensics from VIT Bhopal University. My technical interests include
+          Java, Web Development, Cyber Security and Blockchain. In the free time
+          you will find me reading or doing zumba.<br />
+          <div class="divofsocials">
+            <a href="https://www.linkedin.com/in/anjana-th-019224192/">
+              <img class="socials" src="css/linkedin.png" />
+            </a>
+            <a href="https://github.com/anjanaaaaaaaa">
+              <img class="socials" src="css/github.png" />
+            </a>
+            <a href="https://www.instagram.com/anjana_haridas_._/">
+              <img class="socials" src="css/insta.png" />
+            </a>
+            <a href="https://twitter.com/AnjanaHaridas2">
+              <img class="socials" src="css/twitter.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@master/vendor/three.r119.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.birds.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@master/vendor/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.topology.min.js"></script>
+    <script>
+      VANTA.TOPOLOGY({
+        el: "#svg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+
+      let i = 0;
+      let txt = "Hello, this is Anjana Haridas.";
+      let speed = 200;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("typewriter").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          document.getElementById("typewriter").innerHTML = "";
+          i = 0;
+          typeWriter();
+        }
+      }
+      typeWriter();
+      function hamburger(str) {
+        if (str === "remove")
+          document.getElementById("menu").classList.remove("menu-close");
+        else {
+          document.getElementById("menu").classList.add("menu-close");
+        }
+      }
+    </script>
+  </body>
+</html>
